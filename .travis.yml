@@ -13,6 +13,21 @@ script:
   echo hello
   EOT
 - |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
+  echo hello
+  ls /proc/self
+  EOT
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
+  echo hello
+  cat /proc/self/io
+  EOT
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
+  echo hello
+  cat /proc/self/status
+  EOT
+- |
   /usr/bin/time --format '%M %S %U %I %O' /bin/dash << EOT
   echo hello
   EOT
