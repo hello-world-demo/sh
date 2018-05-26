@@ -6,4 +6,4 @@ script:
 echo hello
 EOT
 
-- hello-time.sh
+- sh hello-time.sh
