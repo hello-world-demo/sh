@@ -3,7 +3,22 @@ language: sh
 
 script:
 - sh hello-time.sh
+- dash hello-time.sh
+- bash hello-time.sh
+- zsh hello-time.sh
 - |
   /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
+  echo hello
+  EOT
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/dash << EOT
+  echo hello
+  EOT
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/bash << EOT
+  echo hello
+  EOT
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/zsh << EOT
   echo hello
   EOT
