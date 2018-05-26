@@ -2,8 +2,8 @@ language: sh
 
 
 script:
-- /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
-echo hello
-EOT
-
 - sh hello-time.sh
+- |
+  /usr/bin/time --format '%M %S %U %I %O' /bin/sh << EOT
+  echo hello
+  EOT
